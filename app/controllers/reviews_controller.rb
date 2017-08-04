@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
    before_action :set_review, only: :destroy
    before_action :logged_in, only: [:create, :destroy]
 
-
   def create
 
     @product = Product.find params[:product_id]
@@ -20,8 +19,9 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    redirect_to :back
+    redirect_to @product
   end
+
 
   private
 
