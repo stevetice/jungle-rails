@@ -133,4 +133,72 @@ cat3.products.create!({
 })
 
 
+## USERS
+
+puts "Re-creating Users ..."
+
+User.destroy_all
+
+User.create!({
+  first_name: 'User',
+  last_name: 'One',
+  email: 'user1@email.com',
+  password: '1234',
+  password_confirmation: '1234'
+})
+
+User.create!({
+  first_name: 'User',
+  last_name: 'Two',
+  email: 'user@two.com',
+  password: 'totoo',
+  password_confirmation: 'totoo'
+})
+
+User.create!({
+  first_name: 'User',
+  last_name: 'Three',
+  email: 'three@mail.com',
+  password: 'trois',
+  password_confirmation: 'trois'
+})
+
+
+
+## REVIEWS
+
+puts "Re-creating Reviews ..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id: 12,
+  user_id: 1,
+  description: "Poured from a stubby 12-ounce brown bottle into a Belgian-style chalice, the beer appears a rich, semi-hazed, deep brown with ruddy hues; a creamy beige head dresses the top, with a wispy center and ringed lace.",
+  rating: 5
+})
+
+Review.create!({
+  product_id: 11,
+  user_id: 2,
+  description: "Malty aromatics make their way to the nose as soon as the bottle is cracked, full with toffee, fruit, soft spices, metallics, faint flora, earth, fresh roots, a bready yeast edge and a deep, spicy and warming alcohol.",
+  rating: 2
+})
+
+Review.create!({
+  product_id: 10,
+  user_id: 3,
+  description: "Poured from a stubby 12-ounce brown bottle into a Belgian-style chalice, the beer appears a rich, semi-hazed, deep brown with ruddy hues; a creamy beige head dresses the top, with a wispy center and ringed lace.",
+  rating: 0
+})
+
+Review.create!({
+  product_id: 12,
+  user_id: 3,
+  description: "A big yeasty smack at the very end.",
+  rating: 54
+})
+
+
+
 puts "DONE!"
