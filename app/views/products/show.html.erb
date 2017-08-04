@@ -29,22 +29,18 @@
   </article>
 
 
-  <article class="product-rating">
-      <div class="row">
-        <h3>Reviews</h3>
-        <% @product.review.each do | review | %>
-          <div class="col-sm-8">
-            <dl class="dl-horizontal">
-              <dt>Name</dt>
-              <dd><%= review.user_id %></dd>
-              <dt>Description</dt>
-              <dd><%= review.description %></dd>
-              <dt>Rating</dt>
-              <dd><%= review.rating %></dd>
-            </dl>
-          </div>
+  <article class="reviews-show container">
+
+    <h3>Reviews</h3>
+      <section class="row">
+        <% if current_user %>
+          <%= render 'review_form' %>
         <% end %>
-      </div>
+      </section>
+
+      <section class="row">
+        <%= render 'review' %>
+      </section>
 
   </article>
 
