@@ -79,10 +79,9 @@ cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
-  quantity: 82,
+  quantity: 0,
   price: 224.50
 })
-
 
 cat2.products.create!({
   name:  'Modern Skateboards',
@@ -120,7 +119,7 @@ cat3.products.create!({
   name:  'Electric Chair',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture2.jpg'),
-  quantity: 2,
+  quantity: 1,
   price: 987.65
 })
 
@@ -140,24 +139,24 @@ puts "Re-creating Users ..."
 User.destroy_all
 
 User.create!({
-  first_name: 'User',
-  last_name: 'One',
+  first_name: 'Buzz',
+  last_name: 'UserOne',
   email: 'user1@email.com',
   password: '1234',
   password_confirmation: '1234'
 })
 
 User.create!({
-  first_name: 'User',
-  last_name: 'Two',
+  first_name: 'Jeeves',
+  last_name: 'UserTwo',
   email: 'user@two.com',
   password: 'totoo',
   password_confirmation: 'totoo'
 })
 
 User.create!({
-  first_name: 'User',
-  last_name: 'Three',
+  first_name: 'Olga',
+  last_name: 'UserThree',
   email: 'three@mail.com',
   password: 'trois',
   password_confirmation: 'trois'
