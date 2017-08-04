@@ -32,16 +32,18 @@
   <article class="product-rating">
       <div class="row">
         <h3>Reviews</h3>
+        <% @product.review.each do | review | %>
           <div class="col-sm-8">
             <dl class="dl-horizontal">
               <dt>Name</dt>
-              <dd><%=  %></dd>
+              <dd><%= review.user_id %></dd>
               <dt>Description</dt>
-              <dd><%=  %></dd>
+              <dd><%= review.description %></dd>
               <dt>Rating</dt>
-              <dd><%=  %></dd>
+              <dd><%= review.rating %></dd>
             </dl>
           </div>
+        <% end %>
       </div>
 
   </article>
