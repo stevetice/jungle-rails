@@ -10,6 +10,12 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
+      respond_to do |format|
+        # Tell the UserMailer to send a welcome email after save
+        UserMailer.order_email(order).deliver_now
+        format.json { render json: order, status: :created, location: @user }
+        format.html { order }
+      end
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, error: order.errors.full_messages.first

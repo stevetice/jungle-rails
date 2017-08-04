@@ -1,0 +1,13 @@
+Thanks for your order, <%= @order.email %>
+
+===============================================
+
+Your order:
+
+<% @order.line_items.each do | line_item | %>
+  <h4><%= line_item.product.name %></h4>
+  <p><%= line_item.product.description %></p>
+  <%= number_to_currency(line_item.product.price) %>
+  <%= line_item.quantity %>
+  <%= number_to_currency(line_item.total_price_cents/100.00) %>s
+<% end %>
