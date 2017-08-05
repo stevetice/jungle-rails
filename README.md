@@ -1,6 +1,15 @@
 # Jungle
+Lighthouse Labs - Week 6 Project
+An inherited (Amazon clone) e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+## Project Goals
+* Become familiar with Ruby and Rails
+* Learn how to navigate an existing code-base.
+* Use existing style and approach to implement new features and fix bugs.
+
+
+## Screenshots
+
 
 
 ## Setup

@@ -22,7 +22,7 @@
 
         <div class="form-group">
           <%= form.label :rating %>
-          <%= form.select( :rating, [ [1], [2], [3], [4], [5] ], class: 'form-control' ) %>
+          <%= form.select( :rating, [ [], [5], [4], [3], [2], [1] ], class: 'form-control' ) %>
         </div>
 
         <%= form.submit 'Submit Review', class: 'btn btn-primary' %>
