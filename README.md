@@ -2,6 +2,7 @@
 Lighthouse Labs - Week 6 Project
 An inherited (Amazon clone) e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+
 ## Project Goals
 * Become familiar with Ruby and Rails
 * Learn how to navigate an existing code-base.
@@ -9,7 +10,8 @@ An inherited (Amazon clone) e-commerce application built with Rails 4.2 for purp
 
 
 ## Screenshots
-
+!["Screenshot of Products page"](https://github.com/stevetice/jungle-rails/blob/master/docs/Jungle.PNG?raw=true)
+!["Screenshot of Order page"](https://github.com/stevetice/jungle-rails/blob/master/docs/Jungle_Order.PNG?raw=true)
 
 
 ## Setup
@@ -24,11 +26,13 @@ An inherited (Amazon clone) e-commerce application built with Rails 4.2 for purp
 8. Put Stripe (test) keys into appropriate .env vars
 9. Run `bin/rails s -b 0.0.0.0` to start the server
 
+
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
 
 ## Dependencies
 
