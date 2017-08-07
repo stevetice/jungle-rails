@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   # If registration is successful user redirected to products page. Unsuccessful registration redirects to registration page.
   def create
     @user = User.new(user_params)
+    @user.email.downcase!
+    @user.email.strip!
     if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
