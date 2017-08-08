@@ -18,7 +18,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   end
 
 
-  scenario "They see the products on the homepage" do
+  scenario "They see all products" do
     # ACT
     visit root_path
 
@@ -29,20 +29,20 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     expect(page).to have_css 'article.product', count: 10
   end
 
-
-  scenario "They click the first product" do
+  scenario "They click add to cart and MyCart should change from 0 to 1" do
     # ACT
     visit root_path
 
-    first('article').find('header').find('a').click
+    first('article').find('footer').first('a').click
     sleep(5)
 
     # DEBUG
     save_screenshot
 
     #  VERIFY
-    expect(page).to have_css 'article.reviews-show'
+    within('nav') do
+      expect(page).to have_content 'My Cart (1)'
+    end
   end
-
 
 end
